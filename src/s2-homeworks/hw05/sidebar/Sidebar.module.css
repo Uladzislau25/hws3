@@ -1,24 +1,63 @@
 .sidebar {
+    width: 317px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -317px;
+    background: #fff;
+    z-index: 1000;
+    transition: all 0.2s;
 }
 
 .sidebar.open {
+    left: 0;
 }
 
 .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.3;
+    z-index: 999;
 }
 
 .nav {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 45px;
+    margin-top: 63px;
+    margin-left: 70px;
 }
 
 .nav a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    text-decoration: none;
+    color: #000;
 }
 
 .nav a:hover {
+    color: #58acff;
 }
 
 .nav a.active {
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: #0059b2;
 }
 .close {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    position: absolute;
+    top: 16px;
+    right: 24px;
 }
 
 .close img {
