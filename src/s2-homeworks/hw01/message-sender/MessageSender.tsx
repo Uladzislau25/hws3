@@ -1,6 +1,6 @@
 import React, {useEffect, useRef, useState} from 'react'
 import { message0 } from '../HW1'
-import s from './MessageSender.module.css'
+import styled from "styled-components";
 
 // компонента, которая тестирует вашу компоненту (не изменять, any не трогать)
 const MessageSender = (props: any) => {
@@ -45,10 +45,9 @@ const MessageSender = (props: any) => {
                 <M key={'message' + m.id} message={m} />
             ))}
 
-            <div id={'hw1-send-message-form'} className={s.sendForm}>
-                <textarea
+            <Sender id={'hw1-send-message-form'}>
+                <Textarea
                     id={'hw1-textarea'}
-                    className={s.textarea}
                     ref={textareaRef}
 
                     title={'Shift+Enter for send'}
@@ -58,19 +57,58 @@ const MessageSender = (props: any) => {
                     onChange={onChange}
                     onKeyDown={onKeyDown}
                 />
-                <button
+                <Button
                     id={'hw1-button'}
-                    className={s.button}
-
                     onClick={addMessage}
                 >
                     {/*текст кнопки могут изменить студенты*/}
                     Send
                     {/**/}
-                </button>
-            </div>
+                </Button>
+            </Sender>
         </>
     )
 }
 
 export default MessageSender
+
+const Sender = styled.div`
+    display: flex;
+    gap: 44px;
+    margin-top: 56px;
+`
+
+const Textarea = styled.textarea`
+    border-radius: 20px;
+    border: none;
+    width: 976px;
+    min-height: 40px;
+    padding: 12px 24px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #000;
+    box-shadow: 0 1px 2px 0 rgba(29, 33, 38, 0.1), 0 5px 20px 0 rgba(29, 33, 38, 0.03);
+    background: #f5f7fb;
+    resize: none;
+    overflow: hidden;
+    &::placeholder {
+        font-family: 'Montserrat', sans-serif;
+        opacity: 0.9;
+        font-weight: 400;
+        font-size: 14px;
+        color: rgba(0, 0, 0, 0.6);
+    }
+`
+
+const Button = styled.button`
+    border-radius: 20px;
+    border: 0;
+    width: 120px;
+    height: 40px;
+    background: #06c;
+    font-weight: 600;
+    font-size: 16px;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+`
