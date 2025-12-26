@@ -1,10 +1,22 @@
 .loader {
-    width: 40px;
-    height: 40px;
-    border: 4px solid #ffffff;
-    border-top-color: #3b82f6;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
-    animation: spin 1s linear infinite;
+    background: conic-gradient(
+    from 0deg,
+    rgba(124, 58, 237, 0) 0deg,
+    rgba(124, 58, 237, 0.2) 120deg,
+    rgba(124, 58, 237, 0.5) 180deg,
+    rgba(124, 58, 237, 1) 300deg,
+    rgba(124, 58, 237, 1) 360deg
+    );
+
+    mask: radial-gradient(
+    farthest-side,
+transparent calc(100% - 16px),
+rgba(0,0,0,.8) calc(100% - 14px),
+   #000 100%);
+    animation: spin 1.2s linear infinite;
 }
 @keyframes spin {
     to {
