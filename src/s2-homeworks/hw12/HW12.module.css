@@ -19,5 +19,15 @@ html {
 }
 
 .select {
-
+    background-color: var(--background);
+    color: var(--color);
+    width: 171px;
+    height: 36px;
+    padding-left: 20px;
+    border-color: var(--color);
+    cursor: pointer;
+    position: relative;
+}
+.select:focus {
+    border-color: var(--color);
 }
