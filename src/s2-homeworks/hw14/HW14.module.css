@@ -1,7 +1,11 @@
 .tech {
-
+    font-family: "Roboto", sans-serif;
 }
 
 .loading {
-
+    text-align: end;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    color: #4d4d4d;
 }
