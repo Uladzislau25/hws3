@@ -53,9 +53,12 @@ const HW15 = () => {
             .then((res) => {
                 // делает студент
 
-                // сохранить пришедшие данные
+                if (res?.data){
+                    setTechs(res.data.techs)
+                    setTotalCount(res.data.totalCount)
+                }// сохранить пришедшие данные
 
-                //
+                    setLoading(false)                //
             })
     }
 
