@@ -3,25 +3,55 @@
 }
 
 .developer {
-
-}
-
-.techHeader {
     width: 50vw;
 }
 
-.developerHeader {
+.techHeader {
+    display: flex;
+    gap: 10px;
+    width: 50vw;
+    padding-left: 10px;
+    cursor: pointer;
+}
 
+.developerHeader {
+    display: flex;
+    gap: 10px;
+    width: 50vw;
+    padding-left: 5px;
+    cursor: pointer;
 }
 
 .row {
+    padding: 10px 0 10px 10px;
+    width: 50%;
     display: flex;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #000;
+    border-top: 1px solid #e5e5e5;
 }
 
 .rowHeader {
+    margin-top: 20px;
+    width: 50%;
     display: flex;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: #000;
+    height: 36px;
+    background-color: #e5e5e5;
 }
 
 .loading {
-
+    z-index: 999;
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    background-size: cover;
+    width: 108px;
+    height: 108px;
 }
